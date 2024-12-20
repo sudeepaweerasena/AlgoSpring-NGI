@@ -1,0 +1,7 @@
+2024-12-09 13:10:35,817 - INFO - Initialized Excel application and set to visible.
+2024-12-09 13:10:45,951 - INFO - Opened workbook: C:\\Users\\sudeepa.w\\Desktop\\Healthnet.xlsm
+2024-12-09 13:10:48,956 - INFO - Found window handle: 1902002
+2024-12-09 13:10:49,147 - INFO - Excel window maximized and brought to foreground.
+2024-12-09 13:10:49,182 - INFO - Assigned 'Census' sheet to instructions_sheet.
+2024-12-09 13:10:49,876 - INFO - Opened source workbook: D:\AlgoSpring\python\Qatar\CensusData.xlsx
+2024-12-09 13:10:49,876 - ERROR - Error reading source data: name 'read_source_data' is not defined
