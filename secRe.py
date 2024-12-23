@@ -76,13 +76,13 @@ def fill_unique_categories_to_cell(sheet, df3, cell="D5"):
     except Exception as e:
         print(f"Error accessing range {cell} in the sheet: {e}")
 
-# Read data from the qatar.xlsx Sheet2 file into a DataFrame(df)
-def read_qatar_data(pd_file_path):
+# Read data from the NGI.xlsx Sheet2 file into a DataFrame(df)
+def read_NGI_data(pd_file_path):
     df = pd.read_excel(pd_file_path, sheet_name='Sheet2')   
     return df
 
-# Read data from the qatar.xlsx Sheet1 file into a DataFrame(df2)
-def read_qatar_data_sheet1(pd_file_path):
+# Read data from the NGI.xlsx Sheet1 file into a DataFrame(df2)
+def read_NGI_data_sheet1(pd_file_path):
     df2 = pd.read_excel(pd_file_path, sheet_name='Sheet1')   
     return df2
 
@@ -208,7 +208,7 @@ def simulate_input():
     time.sleep(2) 
     
     # Define the full path where the PDF will be saved
-    file_path = r'D:\\AlgoSpring\\python\\Qatar\\downloadFile.pdf'
+    file_path = r'C:\\Users\\sudeepa.w\\Documents\\GitHub\\AlgoSpring-NGI\\downloadFile.pdf'
     
     # Ensure the directory exists; create it if it doesn't
     directory = os.path.dirname(file_path)
@@ -236,7 +236,7 @@ def main():
     excel.Visible = True 
     
     # Open the workbook
-    workbook = excel.Workbooks.Open(r'C:\\Users\\sudeepa.w\\Desktop\\Healthnet.xlsm')
+    workbook = excel.Workbooks.Open(r'C:\\Users\\sudeepa.w\\Documents\\GitHub\\AlgoSpring-NGI\\Healthnet.xlsm')
     
     # Maximize the workbook window
     try:
@@ -268,7 +268,7 @@ def main():
     click_ole_button(sheet, 'CommandButton1')
 
     # Paths to CensusData.xlsx
-    source_path = "D:\\AlgoSpring\\python\\Qatar\\CensusData.xlsx" 
+    source_path = "C:\\Users\\sudeepa.w\\Documents\\GitHub\\AlgoSpring-NGI\\CensusData.xlsx" 
 
     # Open CensusData.xlsx
     wb_source = xw.Book(source_path)
@@ -314,14 +314,14 @@ def main():
         instructions_sheet.Range(f'H{index + 9}').Value = row['Visa Issued Emirates']  
         instructions_sheet.Range(f'I{index + 9}').Value = plan_value  
 
-    # Path to the qatar data file
-    pd_file_path = r"D:\\AlgoSpring\\python\\Qatar\\qatar.xlsx"
+    # Path to the NGI data file
+    pd_file_path = r"C:\\Users\\sudeepa.w\\Documents\\GitHub\\AlgoSpring-NGI\\NGI.xlsx"
     
-    # Read the data from qatar.xlsx Sheet2 into a DataFrame
-    df = read_qatar_data(pd_file_path)
+    # Read the data from NGI.xlsx Sheet2 into a DataFrame
+    df = read_NGI_data(pd_file_path)
 
-    # Read the data from qatar.xlsx Sheet1 into a DataFrame
-    df2 = read_qatar_data_sheet1(pd_file_path)
+    # Read the data from NGI.xlsx Sheet1 into a DataFrame
+    df2 = read_NGI_data_sheet1(pd_file_path)
   
     # Fill 'Plan' in column I based on the condition from the pl column for each category
     fill_plan_based_on_condition(workbook.Sheets('Census'), df)
